@@ -1,9 +1,5 @@
 # SISTEMA DE INFORMACIÓN PARA NUTRICIÓN SALUDABLE
 
-## Trabajo de Fin de Grado - Grado en Ingeniería Informática - Universidad de Granada
-
-**Alumno:** Mario López Quesada  
-**Directoras:** Maria José Martín Bautista y Andrea Morales Garzón
 
 ---
 
