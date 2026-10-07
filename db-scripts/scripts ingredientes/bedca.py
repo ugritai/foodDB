@@ -28,7 +28,7 @@ with open(csv_file, 'r', encoding='utf-8-sig') as file:
                 
             # OMS LIGHTS
             
-            oms_lights_salt, oms_lights_sug, oms_lights_total_f, omg_lights_trans = "", "", "", ""
+            oms_lights_salt, oms_lights_sug, oms_lights_total_fat, omg_lights_trans = "", "", "", ""
                 
             if row['sod'] != '':
                 sod = float(row['sod'])/1000 # Pasar de mg a g
@@ -102,7 +102,7 @@ with open(csv_file, 'r', encoding='utf-8-sig') as file:
                     'pot': float(row['pot']) if row['pot'] != '' else None,
                     'mag': float(row['mag']) if row['mag'] != '' else None,
                     'sod': float(row['sod']) if row['sod'] != '' else None,
-                    'salt': round((float(row['sod'])*2.5),3) if row['sod'] != '' else None,
+                    'salt': round((float(row['sod'])*2.5/1000),4) if row['sod'] != '' else None,
                     'phos': float(row['phos']) if row['phos'] != '' else None,
                     'cholesterol': float(row['cholesterol']) if row['cholesterol'] != '' else None,
                 },

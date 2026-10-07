@@ -165,13 +165,13 @@ for alimento in alimentos_dict.values():
 
 
 for alimento in alimentos_dict.values():
-    oms_lights_salt, oms_lights_sug, oms_lights_total_fat, omg_lights = "", "", "", ""
+    oms_lights_salt, oms_lights_sug, oms_lights_total_fat, omg_lights_trans = "", "", "", ""
     
     if 'nutritional_info_100g' in alimento:
         nutritional_info = alimento['nutritional_info_100g']
         
         if 'sod' in nutritional_info and nutritional_info['sod'] != '':
-            alimento['nutritional_info_100g']['salt'] = float(nutritional_info['sod']) * 2.5
+            alimento['nutritional_info_100g']['salt'] = float(nutritional_info['sod']) * 2.5 / 1000
         else:
             alimento['nutritional_info_100g']['salt'] = ""
         

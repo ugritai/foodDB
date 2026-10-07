@@ -27,7 +27,7 @@ with open(csv_file, 'r') as file:
                 
             # OMS LIGHTS
             
-            oms_lights_salt, oms_lights_sug, oms_lights_total_f, omg_lights_trans = "", "", "", ""
+            oms_lights_salt, oms_lights_sug, oms_lights_total_fat, omg_lights_trans = "", "", "", ""
                 
                 
             # Este dataset no contiene información relativa a la cantidad de sodio, por lo que no se puede calcular el semáforo de sal.
