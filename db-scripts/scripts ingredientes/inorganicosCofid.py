@@ -1,3 +1,19 @@
+# IMPORTANTE - ORDEN DE EJECUCIÓN
+#
+# Este script completa la colección 'cofid' con los datos de minerales
+# (sodio, potasio, calcio, magnesio, fósforo, hierro, cloruro), el valor
+# de sal derivado del sodio y el semáforo de sal. CoFID no trae estos
+# datos en el CSV principal.
+#
+# Este script escribe ÚNICAMENTE sobre db['cofid'], no sobre db['all_ingredients'].
+#
+# Por tanto debe ejecutarse DESPUÉS de cofid.py pero ANTES de construir
+# 'all_ingredients'. Si se construye la colección unificada antes de
+# ejecutar este script, los 2887 ingredientes de CoFID quedan sin estos
+# siete minerales ni semáforo de sal en la colección que más adelante
+# usa el sistema
+
+
 from pymongo import MongoClient
 import pandas as pd
 
