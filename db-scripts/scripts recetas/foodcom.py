@@ -20,11 +20,12 @@ with open(csv_file, 'r', encoding='utf-8-sig') as file:
         nutritional_info = [nutritional_info.strip().strip("'") for nutritional_info in row['nutrition'].strip("[]").split(',')] # ['fat', 'sugar', 'salt', 'protein', 'saturated_fat'...]
         
         energy = float(nutritional_info[0])
-        
+
+        # [calories, total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]
         energy_PDV = energy/2000*100
         fat_PDV = float(nutritional_info[1])
         sug_PDV = float(nutritional_info[2])
-        salt_PDV = float(nutritional_info[3])/0.4
+        salt_PDV = float(nutritional_info[3])
         pro_PDV = float(nutritional_info[4])
         sat_PDV = float(nutritional_info[5])
         car_PDV = float(nutritional_info[6])
